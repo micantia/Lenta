@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		247538F9280D85F90040EEC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247538F8280D85F90040EEC8 /* AppDelegate.swift */; };
-		24753902280D85FA0040EEC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24753901280D85FA0040EEC8 /* Assets.xcassets */; };
+		24753902280D85FA0040EEC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24753901280D85FA0040EEC8 /* Images.xcassets */; };
 		24753905280D85FA0040EEC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24753903280D85FA0040EEC8 /* LaunchScreen.storyboard */; };
 		24753911280D86900040EEC8 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24753910280D86900040EEC8 /* NewsListViewController.swift */; };
+		24C43CF6280D8AED008DFFCF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C43CF5280D8AED008DFFCF /* Colors.xcassets */; };
+		24C43CF9280D8B25008DFFCF /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24C43CFB280D8B25008DFFCF /* Localized.strings */; };
+		24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C43D03280D8C2C008DFFCF /* Strings+Generated.swift */; };
+		24C43D07280D8C2C008DFFCF /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C43D04280D8C2C008DFFCF /* XCAssets+Generated.swift */; };
+		24C43D08280D8C2C008DFFCF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C43D05280D8C2C008DFFCF /* Fonts.swift */; };
 		B35E9FE52D2A251FAB7996A2 /* Pods_Lenta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6A945B9D5BC6A62A6D5F8B /* Pods_Lenta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		247538F5280D85F90040EEC8 /* Lenta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247538F8280D85F90040EEC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24753901280D85FA0040EEC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24753901280D85FA0040EEC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24753904280D85FA0040EEC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24753906280D85FA0040EEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24753910280D86900040EEC8 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		24C43CF5280D8AED008DFFCF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		24C43CFA280D8B25008DFFCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
+		24C43D03280D8C2C008DFFCF /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		24C43D04280D8C2C008DFFCF /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		24C43D05280D8C2C008DFFCF /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		39A9D66E870289DE44D9191A /* Pods-Lenta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenta.release.xcconfig"; path = "Target Support Files/Pods-Lenta/Pods-Lenta.release.xcconfig"; sourceTree = "<group>"; };
 		5B4F1749514E338518F681E2 /* Pods-Lenta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenta.debug.xcconfig"; path = "Target Support Files/Pods-Lenta/Pods-Lenta.debug.xcconfig"; sourceTree = "<group>"; };
 		FC6A945B9D5BC6A62A6D5F8B /* Pods_Lenta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lenta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +54,6 @@
 				5B4F1749514E338518F681E2 /* Pods-Lenta.debug.xcconfig */,
 				39A9D66E870289DE44D9191A /* Pods-Lenta.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,7 +98,8 @@
 		2475390C280D86090040EEC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				24753901280D85FA0040EEC8 /* Assets.xcassets */,
+				24C43D02280D8C2C008DFFCF /* Generated */,
+				24C43CF4280D8ADC008DFFCF /* Manual */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -118,6 +128,26 @@
 			path = NewsList;
 			sourceTree = "<group>";
 		};
+		24C43CF4280D8ADC008DFFCF /* Manual */ = {
+			isa = PBXGroup;
+			children = (
+				24753901280D85FA0040EEC8 /* Images.xcassets */,
+				24C43CF5280D8AED008DFFCF /* Colors.xcassets */,
+				24C43CFB280D8B25008DFFCF /* Localized.strings */,
+			);
+			path = Manual;
+			sourceTree = "<group>";
+		};
+		24C43D02280D8C2C008DFFCF /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				24C43D03280D8C2C008DFFCF /* Strings+Generated.swift */,
+				24C43D04280D8C2C008DFFCF /* XCAssets+Generated.swift */,
+				24C43D05280D8C2C008DFFCF /* Fonts.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +156,7 @@
 			buildConfigurationList = 24753909280D85FA0040EEC8 /* Build configuration list for PBXNativeTarget "Lenta" */;
 			buildPhases = (
 				B8C33C380F2261D8D3356612 /* [CP] Check Pods Manifest.lock */,
+				24C43CF2280D8AC5008DFFCF /* SwiftGen */,
 				247538F1280D85F90040EEC8 /* Sources */,
 				247538F2280D85F90040EEC8 /* Frameworks */,
 				247538F3280D85F90040EEC8 /* Resources */,
@@ -177,14 +208,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C43CF9280D8B25008DFFCF /* Localized.strings in Resources */,
+				24C43CF6280D8AED008DFFCF /* Colors.xcassets in Resources */,
 				24753905280D85FA0040EEC8 /* LaunchScreen.storyboard in Resources */,
-				24753902280D85FA0040EEC8 /* Assets.xcassets in Resources */,
+				24753902280D85FA0040EEC8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24C43CF2280D8AC5008DFFCF /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" config run --config SwiftGen/swiftgen.yml\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
 		B8C33C380F2261D8D3356612 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,7 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				247538F9280D85F90040EEC8 /* AppDelegate.swift in Sources */,
+				24C43D08280D8C2C008DFFCF /* Fonts.swift in Sources */,
 				24753911280D86900040EEC8 /* NewsListViewController.swift in Sources */,
+				24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */,
+				24C43D07280D8C2C008DFFCF /* XCAssets+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +282,14 @@
 				24753904280D85FA0040EEC8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		24C43CFB280D8B25008DFFCF /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24C43CFA280D8B25008DFFCF /* en */,
+			);
+			name = Localized.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
