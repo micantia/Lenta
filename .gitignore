@@ -1,0 +1,19 @@
+## gcc
+/*.gcno
+
+## Xcode
+Lenta.xcworkspace
+Lenta.xcodeproj/xcuserdata
+Lenta.xcodeproj
+
+xcuserdata/
+
+.DS_Store
+.Trashes
+*.swp
+
+.build/
+
+Pods/
+build/
+DerivedData/
