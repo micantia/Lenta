@@ -1,0 +1,23 @@
+strings:
+  inputs:
+    - ../Lenta/Resources/Manual/en.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift5
+      output: ../Lenta/Resources/Generated/Strings+Generated.swift
+
+xcassets:
+  inputs:
+    - ../Lenta/Resources/Manual/Images.xcassets
+    - ../Lenta/Resources/Manual/Colors.xcassets
+  outputs:
+    - templateName: swift5
+      params:
+        forceProvidesNamespaces: true
+      output: ../Lenta/Resources/Generated/XCAssets+Generated.swift
+
+fonts: 
+  inputs: ../Lenta/Resources/Manual/Fonts
+  outputs:
+    - templateName: swift5
+      output: ../Lenta/Resources/Generated/Fonts.swift
