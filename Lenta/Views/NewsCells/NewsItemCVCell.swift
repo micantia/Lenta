@@ -56,7 +56,7 @@ final class NewsItemCVCell: UICollectionViewCell {
     func configure(title: String?, subtitle: String?, imageUrl: String?) {
         titleLabel.text = title
         subtitleLabel.text = subtitle
-        imageView.image = nil
+        imageView.download(at: imageUrl)
     }
     
     // MARK: - Private

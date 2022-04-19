@@ -56,6 +56,8 @@ final class NewsListViewController: UIViewController {
         
         setupView()
         bindObservables()
+        
+        viewModel.updateNewsList(with: NewsListServiceParams(query: "bitcoin"))
     }
     
     // MARK: - Public

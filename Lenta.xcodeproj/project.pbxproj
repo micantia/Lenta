@@ -22,6 +22,8 @@
 		2479C77D280F2194006C0BC5 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479C77C280F2194006C0BC5 /* NewsListViewModel.swift */; };
 		2479C788280F2911006C0BC5 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479C787280F2911006C0BC5 /* DependencyContainer.swift */; };
 		2479C78A280F2A0B006C0BC5 /* NewsListServiceParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479C789280F2A0B006C0BC5 /* NewsListServiceParams.swift */; };
+		2479C791280F2DDD006C0BC5 /* ImageCacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479C790280F2DDD006C0BC5 /* ImageCacheStorage.swift */; };
+		2479C793280F3060006C0BC5 /* UIImageView+download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479C792280F3060006C0BC5 /* UIImageView+download.swift */; };
 		24C43CF6280D8AED008DFFCF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C43CF5280D8AED008DFFCF /* Colors.xcassets */; };
 		24C43CF9280D8B25008DFFCF /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24C43CFB280D8B25008DFFCF /* Localized.strings */; };
 		24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C43D03280D8C2C008DFFCF /* Strings+Generated.swift */; };
@@ -69,6 +71,8 @@
 		2479C77C280F2194006C0BC5 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		2479C787280F2911006C0BC5 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		2479C789280F2A0B006C0BC5 /* NewsListServiceParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListServiceParams.swift; sourceTree = "<group>"; };
+		2479C790280F2DDD006C0BC5 /* ImageCacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStorage.swift; sourceTree = "<group>"; };
+		2479C792280F3060006C0BC5 /* UIImageView+download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+download.swift"; sourceTree = "<group>"; };
 		24C43CF5280D8AED008DFFCF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		24C43CFA280D8B25008DFFCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		24C43D03280D8C2C008DFFCF /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -168,11 +172,11 @@
 			isa = PBXGroup;
 			children = (
 				2479C786280F2903006C0BC5 /* DependencyContainer */,
+				24C45B44280EC18700F947F1 /* Helpers */,
 				2479C760280F0FAD006C0BC5 /* Extensions */,
 				2479C753280F00BC006C0BC5 /* Common */,
 				2479C74F280EFF6F006C0BC5 /* Services */,
 				24501CC7280ED10400C6C6F4 /* Models */,
-				24C45B44280EC18700F947F1 /* Helpers */,
 				24C43D09280D8D2E008DFFCF /* Views */,
 				2475390E280D866A0040EEC8 /* Screens */,
 				2475390D280D86170040EEC8 /* Supporting Files */,
@@ -256,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				2479C761280F0FB9006C0BC5 /* Dictionary+toJsonData.swift */,
+				2479C792280F3060006C0BC5 /* UIImageView+download.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +271,14 @@
 				2479C787280F2911006C0BC5 /* DependencyContainer.swift */,
 			);
 			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		2479C78D280F2DC0006C0BC5 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				2479C790280F2DDD006C0BC5 /* ImageCacheStorage.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		24C43CF4280D8ADC008DFFCF /* Manual */ = {
@@ -335,6 +348,7 @@
 		24C45B44280EC18700F947F1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2479C78D280F2DC0006C0BC5 /* Cache */,
 				241F345A280DCF81003C67E8 /* Layouts */,
 			);
 			path = Helpers;
@@ -495,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2479C793280F3060006C0BC5 /* UIImageView+download.swift in Sources */,
 				247538F9280D85F90040EEC8 /* AppDelegate.swift in Sources */,
 				24C43D08280D8C2C008DFFCF /* Fonts.swift in Sources */,
 				2479C77D280F2194006C0BC5 /* NewsListViewModel.swift in Sources */,
@@ -503,6 +518,7 @@
 				24753911280D86900040EEC8 /* NewsListViewController.swift in Sources */,
 				2479C788280F2911006C0BC5 /* DependencyContainer.swift in Sources */,
 				2479C762280F0FB9006C0BC5 /* Dictionary+toJsonData.swift in Sources */,
+				2479C791280F2DDD006C0BC5 /* ImageCacheStorage.swift in Sources */,
 				24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */,
 				2479C755280F00CE006C0BC5 /* ModelState.swift in Sources */,
 				2479C766280F13C8006C0BC5 /* NewsItemsRs.swift in Sources */,
