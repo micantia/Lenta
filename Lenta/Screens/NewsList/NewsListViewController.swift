@@ -21,8 +21,8 @@ final class NewsListViewController: UIViewController {
             
             cell.configure(
                 title: itemIdentifier.title,
-                subtitle: itemIdentifier.subtitle,
-                imageUrl: itemIdentifier.imageUrl
+                subtitle: itemIdentifier.description,
+                imageUrl: itemIdentifier.urlToImage
             )
             
             return cell
@@ -73,13 +73,6 @@ final class NewsListViewController: UIViewController {
     private func applySnapshot(animated: Bool) {
         var snapshot = NewsListSnapshot()
         snapshot.appendSections(NewsListSections.allCases)
-        
-        for section in NewsListSections.allCases {
-            snapshot.appendItems([
-                .init(title: "Hello lenta", subtitle: "hello from diffable data sources", imageUrl: nil),
-                .init(title: "Hello", subtitle: "hello darkness my old friend", imageUrl: nil)
-            ], toSection: section)
-        }
         
         dataSource.apply(snapshot, animatingDifferences: animated)
     }

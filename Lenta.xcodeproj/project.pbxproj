@@ -13,6 +13,7 @@
 		24753902280D85FA0040EEC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24753901280D85FA0040EEC8 /* Images.xcassets */; };
 		24753905280D85FA0040EEC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24753903280D85FA0040EEC8 /* LaunchScreen.storyboard */; };
 		24753911280D86900040EEC8 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24753910280D86900040EEC8 /* NewsListViewController.swift */; };
+		2479C752280EFF8C006C0BC5 /* NewsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479C751280EFF8C006C0BC5 /* NewsListService.swift */; };
 		24C43CF6280D8AED008DFFCF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C43CF5280D8AED008DFFCF /* Colors.xcassets */; };
 		24C43CF9280D8B25008DFFCF /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24C43CFB280D8B25008DFFCF /* Localized.strings */; };
 		24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C43D03280D8C2C008DFFCF /* Strings+Generated.swift */; };
@@ -51,6 +52,7 @@
 		24753904280D85FA0040EEC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24753906280D85FA0040EEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24753910280D86900040EEC8 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		2479C751280EFF8C006C0BC5 /* NewsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListService.swift; sourceTree = "<group>"; };
 		24C43CF5280D8AED008DFFCF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		24C43CFA280D8B25008DFFCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localized.strings; sourceTree = "<group>"; };
 		24C43D03280D8C2C008DFFCF /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		247538F7280D85F90040EEC8 /* Lenta */ = {
 			isa = PBXGroup;
 			children = (
+				2479C74F280EFF6F006C0BC5 /* Services */,
 				24501CC7280ED10400C6C6F4 /* Models */,
 				24C45B44280EC18700F947F1 /* Helpers */,
 				24C43D09280D8D2E008DFFCF /* Views */,
@@ -189,6 +192,22 @@
 			isa = PBXGroup;
 			children = (
 				24753910280D86900040EEC8 /* NewsListViewController.swift */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		2479C74F280EFF6F006C0BC5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2479C750280EFF80006C0BC5 /* NewsList */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2479C750280EFF80006C0BC5 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				2479C751280EFF8C006C0BC5 /* NewsListService.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -277,6 +296,7 @@
 				247538F1280D85F90040EEC8 /* Sources */,
 				247538F2280D85F90040EEC8 /* Frameworks */,
 				247538F3280D85F90040EEC8 /* Resources */,
+				C7C061CFEFB9001F0A3BB45C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,6 +415,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7C061CFEFB9001F0A3BB45C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lenta/Pods-Lenta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lenta/Pods-Lenta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lenta/Pods-Lenta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -409,6 +446,7 @@
 				24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */,
 				24501CC9280ED10D00C6C6F4 /* NewsItem.swift in Sources */,
 				241F345C280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift in Sources */,
+				2479C752280EFF8C006C0BC5 /* NewsListService.swift in Sources */,
 				24C43D07280D8C2C008DFFCF /* XCAssets+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

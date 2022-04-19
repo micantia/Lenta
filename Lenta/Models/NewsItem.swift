@@ -10,10 +10,21 @@ import UIKit
 
 struct NewsItem {
     
-    let title: String
-    let subtitle: String
-    let imageUrl: String?
+    let source: NewsItemSource?
+    let title: String?
+    let description: String?
+    let urlToImage: String?
+    let url: String?
+    let content: String?
+    let publishedAt: String?
     
 }
 
 extension NewsItem: Hashable, Codable {}
+
+struct NewsItemSource {
+    let id: String?
+    let name: String?
+}
+
+extension NewsItemSource: Hashable, Codable {}

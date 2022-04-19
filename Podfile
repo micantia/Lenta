@@ -6,5 +6,5 @@ target 'Lenta' do
   use_frameworks!
 
   pod 'SwiftGen'
-
+  pod 'RxSwift'
 end
