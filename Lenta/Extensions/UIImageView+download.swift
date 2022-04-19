@@ -16,15 +16,11 @@ extension UIImageView {
         guard let url = stringUrl.flatMap({ URL(string: $0) }) else { return }
         
         DispatchQueue.global(qos: .background).async {
-            
             let imageCache = ImageCacheStorage.shared
-            
             if let cachedImage = imageCache.getImage(for: url) {
-                
                 DispatchQueue.main.async { [weak self] in
                     self?.image = cachedImage
                 }
-                
                 return
             }
             
