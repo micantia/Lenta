@@ -14,7 +14,7 @@ final class NewsColumnListLayoutHelper {
         withInsets sectionInsets: NSDirectionalEdgeInsets = .zero,
         interItemSpacing: NSCollectionLayoutSpacing = .fixed(0),
         interGroupScaping: CGFloat = 0
-    ) -> UICollectionViewCompositionalLayout {
+    ) -> UICollectionViewLayout {
         
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
