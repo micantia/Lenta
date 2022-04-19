@@ -9,10 +9,28 @@ import UIKit
 
 final class NewsListViewController: UIViewController {
 
-    fileprivate enum CellIdentifier: String {
-        case newsList = "newsListCellIdentifier"
-    }
-
+    private lazy var dataSource: NewsListDataSource = {
+        let dataSource = NewsListDataSource(
+            collectionView: collectionView
+        ) { collectionView, indexPath, itemIdentifier in
+            
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CellIdentifier.newsList.rawValue,
+                for: indexPath
+            ) as! NewsItemCVCell
+            
+            cell.configure(
+                title: itemIdentifier.title,
+                subtitle: itemIdentifier.subtitle,
+                imageUrl: itemIdentifier.imageUrl
+            )
+            
+            return cell
+        }
+        
+        return dataSource
+    }()
+    
     private lazy var collectionView: UICollectionView = {
         let layout = NewsColumnListLayoutHelper.getNewsColumnListLayout(
             withInsets: .init(top: 16, leading: 16, bottom: 16, trailing: 16),
@@ -24,8 +42,6 @@ final class NewsListViewController: UIViewController {
             NewsItemCVCell.self,
             forCellWithReuseIdentifier: CellIdentifier.newsList.rawValue
         )
-        view.delegate = self
-        view.dataSource = self
         view.backgroundColor = Asset.Colors.white.color
         return view
     }()
@@ -34,6 +50,7 @@ final class NewsListViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        applySnapshot(animated: false)
     }
     
     // MARK: - Public
@@ -53,34 +70,32 @@ final class NewsListViewController: UIViewController {
         ])
     }
     
+    private func applySnapshot(animated: Bool) {
+        var snapshot = NewsListSnapshot()
+        snapshot.appendSections(NewsListSections.allCases)
+        
+        for section in NewsListSections.allCases {
+            snapshot.appendItems([
+                .init(title: "Hello lenta", subtitle: "hello from diffable data sources", imageUrl: nil),
+                .init(title: "Hello", subtitle: "hello darkness my old friend", imageUrl: nil)
+            ], toSection: section)
+        }
+        
+        dataSource.apply(snapshot, animatingDifferences: animated)
+    }
+    
 }
 
-extension NewsListViewController: UICollectionViewDelegate {}
-
-// MARK: - UICollectionViewDataSource conformance
-extension NewsListViewController: UICollectionViewDataSource {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+private extension NewsListViewController {
+    enum NewsListSections: CaseIterable {
+        case main
     }
-
-    func collectionView(
-        _ collectionView: UICollectionView,
-        cellForItemAt indexPath: IndexPath
-    ) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: CellIdentifier.newsList.rawValue,
-            for: indexPath
-        ) as! NewsItemCVCell
-
-
-        cell.configure(
-            title: "Hello Lenta",
-            subtitle: "Hello Lenta\naskdlfkasd;lfka;sdlkf'als;dkf'als;dkf'as;dlkf'dl;f\n ;lk",
-            image: nil
-        )
-
-        return cell
+    
+    typealias NewsListDataSource = UICollectionViewDiffableDataSource<NewsListSections, NewsItem>
+    typealias NewsListSnapshot = NSDiffableDataSourceSnapshot<NewsListSections, NewsItem>
+    
+    enum CellIdentifier: String {
+        case newsList = "newsListCellIdentifier"
     }
 
 }

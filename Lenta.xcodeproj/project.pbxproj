@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		241F345C280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F345B280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift */; };
+		24501CC9280ED10D00C6C6F4 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24501CC8280ED10D00C6C6F4 /* NewsItem.swift */; };
 		247538F9280D85F90040EEC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247538F8280D85F90040EEC8 /* AppDelegate.swift */; };
 		24753902280D85FA0040EEC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24753901280D85FA0040EEC8 /* Images.xcassets */; };
 		24753905280D85FA0040EEC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24753903280D85FA0040EEC8 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		241F345B280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsColumnListLayoutHelper.swift; sourceTree = "<group>"; };
+		24501CC8280ED10D00C6C6F4 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		247538F5280D85F90040EEC8 /* Lenta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247538F8280D85F90040EEC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24753901280D85FA0040EEC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 			path = Layouts;
 			sourceTree = "<group>";
 		};
+		24501CC7280ED10400C6C6F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				24501CC8280ED10D00C6C6F4 /* NewsItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		247538EC280D85F90040EEC8 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		247538F7280D85F90040EEC8 /* Lenta */ = {
 			isa = PBXGroup;
 			children = (
+				24501CC7280ED10400C6C6F4 /* Models */,
 				24C45B44280EC18700F947F1 /* Helpers */,
 				24C43D09280D8D2E008DFFCF /* Views */,
 				2475390E280D866A0040EEC8 /* Screens */,
@@ -396,6 +407,7 @@
 				24C43D0E280D8D83008DFFCF /* NewsItemCVCell.swift in Sources */,
 				24753911280D86900040EEC8 /* NewsListViewController.swift in Sources */,
 				24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */,
+				24501CC9280ED10D00C6C6F4 /* NewsItem.swift in Sources */,
 				241F345C280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift in Sources */,
 				24C43D07280D8C2C008DFFCF /* XCAssets+Generated.swift in Sources */,
 			);

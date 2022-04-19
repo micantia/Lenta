@@ -53,10 +53,10 @@ final class NewsItemCVCell: UICollectionViewCell {
     }
     
     // Cell configuration setup with data
-    func configure(title: String, subtitle: String, image: UIImage?) {
+    func configure(title: String, subtitle: String, imageUrl: String?) {
         titleLabel.text = title
         subtitleLabel.text = subtitle
-        imageView.image = image
+        imageView.image = nil
     }
     
     // MARK: - Private
