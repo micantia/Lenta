@@ -138,6 +138,7 @@
 		247538F7280D85F90040EEC8 /* Lenta */ = {
 			isa = PBXGroup;
 			children = (
+				24C45B44280EC18700F947F1 /* Helpers */,
 				24C43D09280D8D2E008DFFCF /* Views */,
 				2475390E280D866A0040EEC8 /* Screens */,
 				2475390D280D86170040EEC8 /* Supporting Files */,
@@ -205,7 +206,6 @@
 		24C43D09280D8D2E008DFFCF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				241F345A280DCF81003C67E8 /* Layouts */,
 				24C43D0A280D8D39008DFFCF /* NewsCells */,
 			);
 			path = Views;
@@ -244,6 +244,14 @@
 				24C43D26280D9310008DFFCF /* Gilroy-Heavy.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		24C45B44280EC18700F947F1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				241F345A280DCF81003C67E8 /* Layouts */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
