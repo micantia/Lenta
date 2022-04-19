@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import RxSwift
 
 final class NewsListViewController: UIViewController {
 
+    var viewModel: NewsListViewModel!
+    
+    private let disposeBag = DisposeBag()
+    
     private lazy var dataSource: NewsListDataSource = {
         let dataSource = NewsListDataSource(
             collectionView: collectionView
@@ -50,7 +55,7 @@ final class NewsListViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        applySnapshot(animated: false)
+        bindObservables()
     }
     
     // MARK: - Public
@@ -70,13 +75,28 @@ final class NewsListViewController: UIViewController {
         ])
     }
     
-    private func applySnapshot(animated: Bool) {
+    private func applySnapshot(_ items: [NewsItem], animated: Bool) {
         var snapshot = NewsListSnapshot()
-        snapshot.appendSections(NewsListSections.allCases)
+        snapshot.appendSections([.main])
+        snapshot.appendItems(items, toSection: .main)
         
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
     
+    private func bindObservables() {
+        viewModel.newsListState
+            .subscribe(onNext: { [weak self] state in
+                switch state {
+                case .loading:
+                    print("loading")
+                case let .loaded(newsItems):
+                    self?.applySnapshot(newsItems, animated: true)
+                case let .error(error):
+                    print(error)
+                }
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
 private extension NewsListViewController {

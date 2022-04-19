@@ -7,4 +7,5 @@ target 'Lenta' do
 
   pod 'SwiftGen'
   pod 'RxSwift'
+  pod 'Alamofire'
 end

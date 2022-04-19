@@ -14,14 +14,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        initRootController()
+        return true
+    }
+    
+    private func initRootController() {
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let controller = NewsListViewController()
+        controller.viewModel = DependencyContainer.makeNewsListViewModel()
+        
         window?.rootViewController = UINavigationController(
-            rootViewController: NewsListViewController()
+            rootViewController: controller
         )
         window?.makeKeyAndVisible()
         
-        return true
     }
-
 }
 
