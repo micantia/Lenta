@@ -10,7 +10,7 @@ import UIKit
 class RootTabBarController<BarItem: RootBarItemProtocol>: UIViewController {
 
     private lazy var barView: RootTabBarView<BarItem> = {
-        let bar = RootTabBarView(barItems: Array(barItems.keys), selectionHandler: { [weak self] barItem in
+        let bar = RootTabBarView(barItems: barItems.map { $0.key }, selectionHandler: { [weak self] barItem in
             self?.select(barItem: barItem)
         })
         bar.translatesAutoresizingMaskIntoConstraints = false
@@ -23,9 +23,9 @@ class RootTabBarController<BarItem: RootBarItemProtocol>: UIViewController {
         return view
     }()
     
-    private let barItems: [BarItem: UIViewController]
+    private let barItems: KeyValuePairs<BarItem, UIViewController>
     
-    init(barItems: [BarItem: UIViewController]) {
+    init(barItems: KeyValuePairs<BarItem, UIViewController>) {
         self.barItems = barItems
         super.init(nibName: nil, bundle: nil)
     }
@@ -38,7 +38,7 @@ class RootTabBarController<BarItem: RootBarItemProtocol>: UIViewController {
         super.viewDidLoad()
         setupView()
         
-        if let firstBarItem = barItems.keys.first {
+        if let firstBarItem = barItems.first?.key {
             barView.setSelected(barItem: firstBarItem)
         }
     }
@@ -64,7 +64,7 @@ class RootTabBarController<BarItem: RootBarItemProtocol>: UIViewController {
     }
 
     private func select(barItem: BarItem) {
-        guard let vc = barItems[barItem] else { return }
+        guard let vc = barItems.first(where: { $0.key == barItem })?.value else { return }
         
         let navVc = UINavigationController(rootViewController: vc)
         present(navVc, in: viewContainer)

@@ -34,6 +34,8 @@ internal enum Asset {
     internal enum TabBar {
       internal static let queryActive = ImageAsset(name: "query_active")
       internal static let queryInactive = ImageAsset(name: "query_inactive")
+      internal static let settingsActive = ImageAsset(name: "settings_active")
+      internal static let settingsInactive = ImageAsset(name: "settings_inactive")
       internal static let topActive = ImageAsset(name: "top_active")
       internal static let topInactive = ImageAsset(name: "top_inactive")
     }

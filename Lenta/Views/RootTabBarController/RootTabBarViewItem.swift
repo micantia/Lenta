@@ -13,7 +13,7 @@ final class RootTabBarViewItem<BarItem: RootBarItemProtocol>: UIView {
     private lazy var iconView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentMode = .center
+        view.contentMode = .scaleAspectFit
         return view
     }()
     
@@ -51,11 +51,11 @@ final class RootTabBarViewItem<BarItem: RootBarItemProtocol>: UIView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        
+        stackView.spacing = 8
         addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)

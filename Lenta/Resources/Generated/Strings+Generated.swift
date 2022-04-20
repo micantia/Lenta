@@ -16,8 +16,10 @@ internal enum L10n {
   internal enum RootTabBar {
     /// Search
     internal static let search = L10n.tr("Localized", "rootTabBar.search")
-    /// Top
-    internal static let topHighlights = L10n.tr("Localized", "rootTabBar.topHighlights")
+    /// Settings
+    internal static let settings = L10n.tr("Localized", "rootTabBar.settings")
+    /// Top headlines
+    internal static let topHeadlines = L10n.tr("Localized", "rootTabBar.topHeadlines")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

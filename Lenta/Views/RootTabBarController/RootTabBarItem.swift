@@ -19,6 +19,7 @@ protocol RootBarItemProtocol: Hashable {
 enum RootBarItem: Int, RootBarItemProtocol, CaseIterable {
     case topHighlights = 0
     case search
+    case settings
     
     var id: Int {
         rawValue
@@ -27,9 +28,11 @@ enum RootBarItem: Int, RootBarItemProtocol, CaseIterable {
     var title: String {
         switch self {
         case .topHighlights:
-            return L10n.RootTabBar.topHighlights
+            return L10n.RootTabBar.topHeadlines
         case .search:
             return L10n.RootTabBar.search
+        case .settings:
+            return L10n.RootTabBar.settings
         }
     }
     
@@ -39,6 +42,8 @@ enum RootBarItem: Int, RootBarItemProtocol, CaseIterable {
             return Asset.Images.TabBar.topActive.image
         case .search:
             return Asset.Images.TabBar.queryActive.image
+        case .settings:
+            return Asset.Images.TabBar.settingsActive.image
         }
     }
     
@@ -48,6 +53,8 @@ enum RootBarItem: Int, RootBarItemProtocol, CaseIterable {
             return Asset.Images.TabBar.topInactive.image
         case .search:
             return Asset.Images.TabBar.queryInactive.image
+        case .settings:
+            return Asset.Images.TabBar.settingsInactive.image
         }
     }
 }

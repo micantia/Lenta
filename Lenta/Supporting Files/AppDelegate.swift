@@ -26,8 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 dependencyContainer: DependencyContainer.shared
             )
         
-        let barItems: [RootBarItem: UIViewController] = [
-            .search: searchViewController
+        let barItems: KeyValuePairs<RootBarItem, UIViewController> = [
+            .topHighlights: UIViewController(),
+            .search: searchViewController,
+            .settings: UIViewController()
         ]
         
         window?.rootViewController = RootTabBarController(barItems: barItems)
