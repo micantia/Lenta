@@ -7,10 +7,17 @@
 
 import Foundation
 
-final class DependencyContainer {
+protocol NewsListViewModelFactoryProtocol {
+    func makeNewsListViewModel() -> NewsListViewModel
+}
+
+final class DependencyContainer: NewsListViewModelFactoryProtocol {
     
-    static func makeNewsListViewModel() -> NewsListViewModel {
-        
+    static let shared = DependencyContainer()
+    
+    private init() {}
+    
+    func makeNewsListViewModel() -> NewsListViewModel {
         let networkingService = NetworkingService()
         let newsListService = NewsListService(networkingService: networkingService)
         return NewsListViewModel(newsListService: newsListService)

@@ -20,13 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func initRootController() {
         window = UIWindow(frame: UIScreen.main.bounds)
+
+        let searchViewController = ViewControllerFactory
+            .makeNewsListViewController(
+                dependencyContainer: DependencyContainer.shared
+            )
         
-        let controller = NewsListViewController()
-        controller.viewModel = DependencyContainer.makeNewsListViewModel()
+        let barItems: [RootBarItem: UIViewController] = [
+            .topHighlights: UIViewController(),
+            .search: searchViewController
+        ]
         
-        window?.rootViewController = UINavigationController(
-            rootViewController: controller
-        )
+        window?.rootViewController = RootTabBarController(barItems: barItems)
+        
         window?.makeKeyAndVisible()
         
     }

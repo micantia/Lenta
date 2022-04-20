@@ -7,3 +7,6 @@
 */
 
 "app title" = "Lenta";
+
+"rootTabBar.topHighlights" = "Top";
+"rootTabBar.search" = "Search";

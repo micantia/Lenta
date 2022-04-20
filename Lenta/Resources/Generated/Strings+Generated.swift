@@ -12,6 +12,13 @@ import Foundation
 internal enum L10n {
   /// Lenta
   internal static let appTitle = L10n.tr("Localized", "app title")
+
+  internal enum RootTabBar {
+    /// Search
+    internal static let search = L10n.tr("Localized", "rootTabBar.search")
+    /// Top
+    internal static let topHighlights = L10n.tr("Localized", "rootTabBar.topHighlights")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2417EFC1280FF54700618B0C /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFC0280FF54700618B0C /* RootTabBarController.swift */; };
+		2417EFC3280FF6C900618B0C /* RootTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFC2280FF6C900618B0C /* RootTabBarItem.swift */; };
+		2417EFC5280FFA2C00618B0C /* RootTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFC4280FFA2C00618B0C /* RootTabBarView.swift */; };
+		2417EFC7280FFBD900618B0C /* RootTabBarViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFC6280FFBD900618B0C /* RootTabBarViewItem.swift */; };
+		2417EFC9281010C400618B0C /* UIController+presentInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFC8281010C400618B0C /* UIController+presentInView.swift */; };
+		2417EFCB2810132200618B0C /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFCA2810132200618B0C /* ViewControllerFactory.swift */; };
 		241F345C280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F345B280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift */; };
 		24501CC9280ED10D00C6C6F4 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24501CC8280ED10D00C6C6F4 /* NewsItem.swift */; };
 		247538F9280D85F90040EEC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247538F8280D85F90040EEC8 /* AppDelegate.swift */; };
@@ -54,6 +60,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2417EFC0280FF54700618B0C /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		2417EFC2280FF6C900618B0C /* RootTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarItem.swift; sourceTree = "<group>"; };
+		2417EFC4280FFA2C00618B0C /* RootTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarView.swift; sourceTree = "<group>"; };
+		2417EFC6280FFBD900618B0C /* RootTabBarViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewItem.swift; sourceTree = "<group>"; };
+		2417EFC8281010C400618B0C /* UIController+presentInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIController+presentInView.swift"; sourceTree = "<group>"; };
+		2417EFCA2810132200618B0C /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		241F345B280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsColumnListLayoutHelper.swift; sourceTree = "<group>"; };
 		24501CC8280ED10D00C6C6F4 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		247538F5280D85F90040EEC8 /* Lenta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +143,17 @@
 				FC6A945B9D5BC6A62A6D5F8B /* Pods_Lenta.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2417EFBF280FF51900618B0C /* RootTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				2417EFC0280FF54700618B0C /* RootTabBarController.swift */,
+				2417EFC2280FF6C900618B0C /* RootTabBarItem.swift */,
+				2417EFC4280FFA2C00618B0C /* RootTabBarView.swift */,
+				2417EFC6280FFBD900618B0C /* RootTabBarViewItem.swift */,
+			);
+			path = RootTabBarController;
 			sourceTree = "<group>";
 		};
 		241F345A280DCF81003C67E8 /* Layouts */ = {
@@ -261,6 +284,7 @@
 			children = (
 				2479C761280F0FB9006C0BC5 /* Dictionary+toJsonData.swift */,
 				2479C792280F3060006C0BC5 /* UIImageView+download.swift */,
+				2417EFC8281010C400618B0C /* UIController+presentInView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				2479C787280F2911006C0BC5 /* DependencyContainer.swift */,
+				2417EFCA2810132200618B0C /* ViewControllerFactory.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -305,6 +330,7 @@
 		24C43D09280D8D2E008DFFCF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2417EFBF280FF51900618B0C /* RootTabBarController */,
 				24C43D0A280D8D39008DFFCF /* NewsCells */,
 			);
 			path = Views;
@@ -510,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2479C793280F3060006C0BC5 /* UIImageView+download.swift in Sources */,
+				2417EFC1280FF54700618B0C /* RootTabBarController.swift in Sources */,
 				247538F9280D85F90040EEC8 /* AppDelegate.swift in Sources */,
 				24C43D08280D8C2C008DFFCF /* Fonts.swift in Sources */,
 				2479C77D280F2194006C0BC5 /* NewsListViewModel.swift in Sources */,
@@ -517,14 +544,19 @@
 				24C43D0E280D8D83008DFFCF /* NewsItemCVCell.swift in Sources */,
 				24753911280D86900040EEC8 /* NewsListViewController.swift in Sources */,
 				2479C788280F2911006C0BC5 /* DependencyContainer.swift in Sources */,
+				2417EFC3280FF6C900618B0C /* RootTabBarItem.swift in Sources */,
+				2417EFC5280FFA2C00618B0C /* RootTabBarView.swift in Sources */,
 				2479C762280F0FB9006C0BC5 /* Dictionary+toJsonData.swift in Sources */,
+				2417EFC9281010C400618B0C /* UIController+presentInView.swift in Sources */,
 				2479C791280F2DDD006C0BC5 /* ImageCacheStorage.swift in Sources */,
 				24C43D06280D8C2C008DFFCF /* Strings+Generated.swift in Sources */,
 				2479C755280F00CE006C0BC5 /* ModelState.swift in Sources */,
+				2417EFCB2810132200618B0C /* ViewControllerFactory.swift in Sources */,
 				2479C766280F13C8006C0BC5 /* NewsItemsRs.swift in Sources */,
 				24501CC9280ED10D00C6C6F4 /* NewsItem.swift in Sources */,
 				241F345C280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift in Sources */,
 				2479C75D280F070E006C0BC5 /* NetworkingService.swift in Sources */,
+				2417EFC7280FFBD900618B0C /* RootTabBarViewItem.swift in Sources */,
 				2479C78A280F2A0B006C0BC5 /* NewsListServiceParams.swift in Sources */,
 				2479C752280EFF8C006C0BC5 /* NewsListService.swift in Sources */,
 				24C43D07280D8C2C008DFFCF /* XCAssets+Generated.swift in Sources */,
