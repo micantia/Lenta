@@ -26,6 +26,8 @@ internal enum Asset {
       internal static let subtitle = ColorAsset(name: "subtitle")
       internal static let title = ColorAsset(name: "title")
     }
+    internal static let zircon = ColorAsset(name: "Zircon")
+    internal static let catskillWhite = ColorAsset(name: "catskillWhite")
     internal static let separatorColor = ColorAsset(name: "separatorColor")
     internal static let white = ColorAsset(name: "white")
   }

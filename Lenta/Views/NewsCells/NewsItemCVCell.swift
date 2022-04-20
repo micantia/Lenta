@@ -20,7 +20,7 @@ final class NewsItemCVCell: UICollectionViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = FontFamily.Gilroy.bold.font(size: 14)
+        label.font = FontFamily.Gilroy.bold.font(size: 16)
         label.textColor = Asset.Colors.Text.title.color
         label.numberOfLines = 2
         label.setContentHuggingPriority(.defaultHigh, for: .vertical)
@@ -30,7 +30,7 @@ final class NewsItemCVCell: UICollectionViewCell {
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = FontFamily.Gilroy.medium.font(size: 12)
+        label.font = FontFamily.Gilroy.medium.font(size: 14)
         label.textColor = Asset.Colors.Text.subtitle.color
         label.numberOfLines = 3
         return label
@@ -62,6 +62,8 @@ final class NewsItemCVCell: UICollectionViewCell {
     // MARK: - Private
     // Hierarchy setup
     private func setupView() {
+        contentView.backgroundColor = Asset.Colors.white.color
+        
         contentView.addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -72,18 +74,25 @@ final class NewsItemCVCell: UICollectionViewCell {
         
         contentView.addSubview(titleLabel)
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 12),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12)
         ])
         
         contentView.addSubview(subtitleLabel)
         NSLayoutConstraint.activate([
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 6),
-            subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            subtitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            subtitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+            subtitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
+            subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12)
         ])
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = Asset.Colors.catskillWhite.color.cgColor
+        contentView.layer.cornerRadius = 6
+        contentView.layer.masksToBounds = true
+    }
 }

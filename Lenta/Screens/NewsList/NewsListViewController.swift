@@ -47,7 +47,7 @@ final class NewsListViewController: UIViewController {
             NewsItemCVCell.self,
             forCellWithReuseIdentifier: CellIdentifier.newsList.rawValue
         )
-        view.backgroundColor = Asset.Colors.white.color
+        view.backgroundColor = Asset.Colors.zircon.color
         return view
     }()
     
@@ -65,7 +65,7 @@ final class NewsListViewController: UIViewController {
     // MARK: - Private
     private func setupView() {
         title = L10n.appTitle
-        view.backgroundColor = Asset.Colors.white.color
+        view.backgroundColor = Asset.Colors.zircon.color
 
         view.addSubview(collectionView)
         let safeArea = view.safeAreaLayoutGuide
