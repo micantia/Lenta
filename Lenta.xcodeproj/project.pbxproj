@@ -13,6 +13,7 @@
 		2417EFC7280FFBD900618B0C /* RootTabBarViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFC6280FFBD900618B0C /* RootTabBarViewItem.swift */; };
 		2417EFC9281010C400618B0C /* UIController+presentInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFC8281010C400618B0C /* UIController+presentInView.swift */; };
 		2417EFCB2810132200618B0C /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFCA2810132200618B0C /* ViewControllerFactory.swift */; };
+		2417EFCD2810223300618B0C /* RequestPatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417EFCC2810223300618B0C /* RequestPatcher.swift */; };
 		241F345C280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F345B280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift */; };
 		24501CC9280ED10D00C6C6F4 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24501CC8280ED10D00C6C6F4 /* NewsItem.swift */; };
 		247538F9280D85F90040EEC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247538F8280D85F90040EEC8 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		2417EFC6280FFBD900618B0C /* RootTabBarViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewItem.swift; sourceTree = "<group>"; };
 		2417EFC8281010C400618B0C /* UIController+presentInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIController+presentInView.swift"; sourceTree = "<group>"; };
 		2417EFCA2810132200618B0C /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		2417EFCC2810223300618B0C /* RequestPatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPatcher.swift; sourceTree = "<group>"; };
 		241F345B280DCF8F003C67E8 /* NewsColumnListLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsColumnListLayoutHelper.swift; sourceTree = "<group>"; };
 		24501CC8280ED10D00C6C6F4 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		247538F5280D85F90040EEC8 /* Lenta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +277,7 @@
 			children = (
 				2479C75C280F070E006C0BC5 /* NetworkingService.swift */,
 				2479C75E280F0D6E006C0BC5 /* ApiRequest.swift */,
+				2417EFCC2810223300618B0C /* RequestPatcher.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				2479C78A280F2A0B006C0BC5 /* NewsListServiceParams.swift in Sources */,
 				2479C752280EFF8C006C0BC5 /* NewsListService.swift in Sources */,
 				24C43D07280D8C2C008DFFCF /* XCAssets+Generated.swift in Sources */,
+				2417EFCD2810223300618B0C /* RequestPatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

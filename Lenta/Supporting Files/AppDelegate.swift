@@ -20,14 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func initRootController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-
+        
         let searchViewController = ViewControllerFactory
             .makeNewsListViewController(
                 dependencyContainer: DependencyContainer.shared
             )
         
         let barItems: [RootBarItem: UIViewController] = [
-            .topHighlights: UIViewController(),
             .search: searchViewController
         ]
         
