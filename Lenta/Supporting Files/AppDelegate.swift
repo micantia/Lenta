@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         initRootController()
+        setupNavBarAppearance()
         return true
     }
     
@@ -36,6 +37,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+    }
+    
+    private func setupNavBarAppearance() {
+        let appearance = UINavigationBar.appearance()
+        appearance.barStyle = .default
+        appearance.isTranslucent = false
+        
+        if #available(iOS 15, *) {
+            let customAppearance = UINavigationBarAppearance()
+            customAppearance.titleTextAttributes = [
+                NSAttributedString.Key.font: FontFamily.Gilroy.medium.font(size: 16)
+            ]
+            customAppearance.configureWithOpaqueBackground()
+            
+            appearance.standardAppearance = customAppearance
+            appearance.scrollEdgeAppearance = customAppearance
+        } else {
+            appearance.titleTextAttributes = [
+                NSAttributedString.Key.font: FontFamily.Gilroy.medium.font(size: 16),
+            ]
+        }
     }
 }
 
