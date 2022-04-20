@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 15, *) {
             let customAppearance = UINavigationBarAppearance()
             customAppearance.titleTextAttributes = [
-                NSAttributedString.Key.font: FontFamily.Gilroy.medium.font(size: 16)
+                NSAttributedString.Key.font: FontFamily.Gilroy.bold.font(size: 18)
             ]
             customAppearance.configureWithOpaqueBackground()
             
@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appearance.scrollEdgeAppearance = customAppearance
         } else {
             appearance.titleTextAttributes = [
-                NSAttributedString.Key.font: FontFamily.Gilroy.medium.font(size: 16),
+                NSAttributedString.Key.font: FontFamily.Gilroy.bold.font(size: 18),
             ]
         }
     }
